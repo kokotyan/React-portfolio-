@@ -1,24 +1,24 @@
-import React from 'react';
+import React from "react";
 
 const App: React.FC = () => {
   return (
     <div className="min-h-screen bg-gray-100 text-gray-800">
       <header className="bg-white shadow">
         <div className="container mx-auto py-6 px-4">
-          <h1 className="text-3xl font-bold">My Portfolio</h1>
+          <h1 className="text-3xl font-bold">Koko's portfolio</h1>
         </div>
       </header>
 
       <main className="container mx-auto py-10 px-4">
         <section className="mb-10">
-          <h2 className="text-2xl font-semibold mb-4">About Me</h2>
+          <h2 className="text-2xl font-semibold mb-4">私について</h2>
           <p className="text-lg">
-            I am a web developer with experience in building beautiful and functional websites.
+            2001年2月7日に珠洲で産声を上げたエンジニアの卵、空と音楽、それと美味しい食べ物が好き。
           </p>
         </section>
 
         <section className="mb-10">
-          <h2 className="text-2xl font-semibold mb-4">Projects</h2>
+          <h2 className="text-2xl font-semibold mb-4">制作物</h2>
           <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
             <div className="bg-white shadow rounded-lg p-6">
               <h3 className="text-xl font-bold mb-2">Project 1</h3>
@@ -44,11 +44,13 @@ const App: React.FC = () => {
 
       <footer className="bg-white shadow mt-10 py-6">
         <div className="container mx-auto text-center">
-          <p className="text-gray-600">&copy; 2024 My Portfolio. All rights reserved.</p>
+          <p className="text-gray-600">
+            &copy; 2024 ここちゃんのポートフォリオサイト!
+          </p>
         </div>
       </footer>
     </div>
   );
-}
+};
 
 export default App;
