@@ -4,6 +4,32 @@ const App: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const sections = ["About Me", "Skills", "Productions"];
 
+  // Productions data
+  const productions = [
+    {
+      title: "WordPress",
+      description: "私のブログサイトです。",
+      link: "https://hagf.buzz",
+      image:
+        "https://hagf.buzz/wp-content/uploads/2024/02/IMG_0499-scaled.jpeg", 
+    },
+    {
+      title: "React-portfolio",
+      description: "これは今のを作る前に作ったポートフォリオです。",
+      link: "https://kokotyan.github.io/react-portfolio/",
+      image:
+        "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg",
+    },
+    {
+      title: "Project 3",
+      description: "これは三番目のプロジェクトです。",
+      link: "https://example.com/project3",
+      image: "https://via.placeholder.com/150",
+    },
+  ];
+
+  // imageは画像URLに置き換えてください
+
   return (
     <div
       className="min-h-screen bg-gray-100 text-gray-800"
@@ -116,6 +142,10 @@ const App: React.FC = () => {
           className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-16"
         >
           <h2 className="text-3xl font-bold text-gray-900">Skills</h2>
+          <p className="mt-4 text-lg text-gray-600">
+            基本はJavaScriptのフレームワークであるReactやTypeScriptでコードを組んでいます。最近はTailwind
+            CSSを使ってこれを作っています。
+          </p>
           <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {/* Skill items */}
           </div>
@@ -128,16 +158,34 @@ const App: React.FC = () => {
         >
           <h2 className="text-3xl font-bold text-gray-900">Productions</h2>
           <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {/* Production items */}
+            {productions.map((production) => (
+              <a
+                key={production.title}
+                href={production.link}
+                className="block bg-white shadow-md rounded-lg overflow-hidden transform transition-transform duration-300 hover:scale-105"
+              >
+                <img
+                  src={production.image}
+                  alt={production.title}
+                  className="w-full h-48 object-cover"
+                />
+                <div className="p-4">
+                  <h3 className="text-xl font-semibold text-gray-900">
+                    {production.title}
+                  </h3>
+                  <p className="mt-2 text-gray-600">{production.description}</p>
+                </div>
+              </a>
+            ))}
           </div>
         </section>
       </main>
 
       {/* Footer */}
-      <footer className="bg-white shadow-lg py-4">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-center text-gray-500">
-            &copy; 2023 Koko's Portfolio. All rights reserved.
+      <footer className="bg-white mt-16 shadow-lg">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+          <p className="text-center text-gray-500 text-sm">
+            © 2024 Koko's Portfolio. All rights reserved.
           </p>
         </div>
       </footer>
