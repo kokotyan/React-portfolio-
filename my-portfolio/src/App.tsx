@@ -11,24 +11,24 @@ const App: React.FC = () => {
       description: "私のブログサイトです。",
       link: "https://hagf.buzz",
       image:
-        "https://hagf.buzz/wp-content/uploads/2024/02/IMG_0499-scaled.jpeg", 
+        "https://hagf.buzz/wp-content/uploads/2024/02/IMG_0499-scaled.jpeg",
     },
     {
       title: "React-portfolio",
-      description: "これは今のを作る前に作ったポートフォリオです。",
+      description: "これを作る前に作ったポートフォリオです。",
       link: "https://kokotyan.github.io/react-portfolio/",
       image:
         "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg",
     },
     {
-      title: "Project 3",
-      description: "これは三番目のプロジェクトです。",
+      title: "Image-discrimination",
+      description: "画像判別のAIを作っています。",
       link: "https://example.com/project3",
       image: "https://via.placeholder.com/150",
     },
   ];
 
-  // imageは画像URLに置き換えてください
+  // imageは画像URLに置き換える
 
   return (
     <div
@@ -132,7 +132,7 @@ const App: React.FC = () => {
         <section id="about" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-gray-900">About Me</h2>
           <p className="mt-4 text-lg text-gray-600">
-            2001年2月7日に石川のさきっぽ、珠洲で産声を上げた。空と音楽、それと美味しい食べ物が好き。
+            2001年2月7日に石川のさきっぽの珠洲で産声を上げた。空と音楽、それと美味しい食べ物が好き。
           </p>
         </section>
 
